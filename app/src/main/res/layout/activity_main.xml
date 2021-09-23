@@ -24,4 +24,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Recyclerview example"></Button>
+
+    <Button
+        android:id="@+id/uomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UOM'S"></Button>
 </LinearLayout>

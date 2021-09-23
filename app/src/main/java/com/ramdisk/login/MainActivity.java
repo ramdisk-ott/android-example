@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.ramdisk.login.uom.UOMActivity;
+
 public class MainActivity extends AppCompatActivity {
     String TAG = MainActivity.class.getName();
 
@@ -33,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.uomButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, UOMActivity.class);
                 startActivity(intent);
             }
         });
