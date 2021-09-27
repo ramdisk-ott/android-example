@@ -30,4 +30,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="UOM'S"></Button>
+    <Button
+        android:id="@+id/cityButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="City"></Button>
+
+
 </LinearLayout>

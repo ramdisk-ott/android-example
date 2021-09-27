@@ -12,6 +12,8 @@
         <activity android:name=".uom.UOMActivity"></activity>
         <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".LoginActivity" />
+
+        <activity android:name=".CityActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -69,6 +69,9 @@ public class RetrofitUtil {
         @Headers({"Content-type: application/json"})
         @GET("weight_unit/10")
         Call<List<UOM>> uoms();
+        @Headers({"Content-type: application/json"})
+        @GET("city/list")
+        Call<List<Cities>> cities();
     }
 
 }
