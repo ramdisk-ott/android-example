@@ -56,7 +56,7 @@ public class RetrofitUtil {
                         .setDateFormat("yyyy-MM-dd HH:mm:ss")
                         .create();
                 Retrofit retrofit = new retrofit2.Retrofit.Builder()
-                        .baseUrl("https://staging.skyvideo.in:8445/retail-api/")
+                        .baseUrl("https://staging.skyvideo.in:8445/quinta-api/")
                         .addConverterFactory(GsonConverterFactory.create(gson)).client(client)
                         .build();
                 networkService = retrofit.create(NetworkService.class);

@@ -14,9 +14,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CityAdapter extends RecyclerView.Adapter<CityAdapter.Holder> {
-public List<Cities> cities;
+    public List<Cities> cities;
 
-    public CityAdapter(List<Cities> body) {
+    public CityAdapter(List<Cities> cities) {
+        this.cities = cities;
     }
 
     @NonNull
@@ -30,10 +31,10 @@ public List<Cities> cities;
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
         Cities country = cities.get(position);
-        holder.id.setText(country.getId());
+        holder.id.setText(country.getId()+"");
         holder.name.setText(country.getName());
         holder.state.setText(country.getState());
-        holder.pincode.setText(country.getPincode());
+        holder.pincode.setText(country.getPincode()+"");
 
     }
 
@@ -43,17 +44,14 @@ public List<Cities> cities;
     }
 
     public class Holder extends RecyclerView.ViewHolder {
-        public TextView id,name,state,pincode;
+        public TextView id, name, state, pincode;
 
         public Holder(@NonNull View itemView) {
             super(itemView);
-            id=itemView.findViewById(R.id.id);
-            name=itemView.findViewById(R.id.name);
-            state=itemView.findViewById(R.id.state);
-            pincode=itemView.findViewById(R.id.pincode);
-
-
-
+            id = itemView.findViewById(R.id.id);
+            name = itemView.findViewById(R.id.name);
+            state = itemView.findViewById(R.id.state);
+            pincode = itemView.findViewById(R.id.pincode);
 
 
         }

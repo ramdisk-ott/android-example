@@ -2,6 +2,7 @@ package com.ramdisk.login;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.util.Log;
 
 import com.ramdisk.login.uom.UOM;
 import com.ramdisk.login.uom.UOMAdapter;
@@ -15,21 +16,17 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 
 public class CityActivity extends AppCompatActivity {
-
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
         setContentView(R.layout.activity_city);
         List<UOM> uoms = new ArrayList<>();
+        Log.d("CityActivity", "onCreate: ");
 
        /* UOM uom = new UOM();
         uom.setAbbreviation("Piece");
@@ -57,6 +54,7 @@ public class CityActivity extends AppCompatActivity {
 
                 }
             }
+
             @Override
             public void onFailure(Call<List<Cities>> call, Throwable t) {
             }
