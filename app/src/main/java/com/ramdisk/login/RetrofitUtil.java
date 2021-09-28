@@ -72,6 +72,9 @@ public class RetrofitUtil {
         @Headers({"Content-type: application/json"})
         @GET("city/list")
         Call<List<Cities>> cities();
+        @Headers({"Content-type: application/json"})
+        @GET("store/list")
+        Call<List<Store>> store();
     }
 
 }
