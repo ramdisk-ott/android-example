@@ -1,15 +1,15 @@
-package com.ramdisk.login;
+package com.ramdisk.login.store;
 
 public class Store {
-     private int mobile;
+     private String mobile;
      private String name;
      private String gst;
 
-     public int getMobile() {
+     public String getMobile() {
         return mobile;
     }
 
-    public void setMobile(int mobile) {
+    public void setMobile(String mobile) {
         this.mobile = mobile;
     }
 

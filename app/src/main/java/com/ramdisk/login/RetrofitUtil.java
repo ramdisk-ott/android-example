@@ -5,6 +5,8 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.ramdisk.login.city.Cities;
+import com.ramdisk.login.store.Store;
 import com.ramdisk.login.uom.UOM;
 
 import java.util.List;
@@ -46,6 +48,7 @@ public class RetrofitUtil {
                         Log.d(TAG, "body: " + buffer.readUtf8());
                     }
                     okhttp3.Response response = chain.proceed(request);
+                    Log.d(TAG, "response: " + response.peekBody(2048).string());
                     return response;
                 });
 
@@ -69,9 +72,11 @@ public class RetrofitUtil {
         @Headers({"Content-type: application/json"})
         @GET("weight_unit/10")
         Call<List<UOM>> uoms();
+
         @Headers({"Content-type: application/json"})
         @GET("city/list")
         Call<List<Cities>> cities();
+
         @Headers({"Content-type: application/json"})
         @GET("store/list")
         Call<List<Store>> store();

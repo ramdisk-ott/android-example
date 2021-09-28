@@ -1,4 +1,4 @@
-package com.ramdisk.login;
+package com.ramdisk.login.country;
 
 public class Country {
     private String name;

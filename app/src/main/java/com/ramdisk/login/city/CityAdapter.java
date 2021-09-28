@@ -1,12 +1,11 @@
-package com.ramdisk.login;
+package com.ramdisk.login.city;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.ramdisk.login.uom.UOM;
-import com.ramdisk.login.uom.UOMAdapter;
+import com.ramdisk.login.R;
 
 import java.util.List;
 

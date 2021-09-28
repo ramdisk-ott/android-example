@@ -1,50 +1,41 @@
-package com.ramdisk.login;
+package com.ramdisk.login.store;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.util.Log;
 
+import com.ramdisk.login.R;
+import com.ramdisk.login.RetrofitUtil;
 import com.ramdisk.login.uom.UOM;
-import com.ramdisk.login.uom.UOMAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
-public class CityActivity extends AppCompatActivity {
+public class StoreActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_city);
+        setContentView(R.layout.activity_store);
         List<UOM> uoms = new ArrayList<>();
-        Log.d("CityActivity", "onCreate: ");
-
-       /* UOM uom = new UOM();
-        uom.setAbbreviation("Piece");
-
-        uoms.add(uom);
-
-        uom = new UOM();
-        uom.setAbbreviation("KiloGram");
-        uoms.add(uom);*/
+        Log.d("storeActivity", "onCreate: ");
         RetrofitUtil.context = getApplicationContext();
         RetrofitUtil.getInstance();
 
-        Call<List<Cities>> call = RetrofitUtil.networkService.cities();
-        call.enqueue(new Callback<List<Cities>>() {
+        Call<List<Store>> call = RetrofitUtil.networkService.store();
+        call.enqueue(new Callback<List<Store>>() {
             @Override
-            public void onResponse(Call<List<Cities>> call, retrofit2.Response<List<Cities>> response) {
+            public void onResponse(Call<List<Store>> call, Response<List<Store>> response) {
+                Log.d("storeActivity", "onResponse: "+response.body());
                 if (response.body() != null) {
-                    CityAdapter countryAdapter = new CityAdapter(response.body());
+                    StoreAdapter countryAdapter = new StoreAdapter(response.body());
                     RecyclerView recyclerView = findViewById(R.id.recyclerView);
                     DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL);
                     recyclerView.addItemDecoration(dividerItemDecoration);
@@ -56,9 +47,17 @@ public class CityActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<List<Cities>> call, Throwable t) {
+            public void onFailure(Call<List<Store>> call, Throwable t) {
+                Log.d("storeActivity", "onFailure: "+t.getMessage() );
+
             }
         });
 
     }
 }
+
+
+
+
+
+

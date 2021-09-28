@@ -1,4 +1,4 @@
-package com.ramdisk.login;
+package com.ramdisk.login.city;
 
 public class Cities {
     private int id;

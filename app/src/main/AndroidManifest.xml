@@ -11,10 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Login">
         <activity android:name=".uom.UOMActivity"></activity>
-        <activity android:name=".RecyclerViewActivity" />
+        <activity android:name=".country.CountryActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".StoreActivity" />
-        <activity android:name=".CityActivity"></activity>
+        <activity android:name=".store.StoreActivity" />
+        <activity android:name=".city.CityActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,12 +6,8 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.ramdisk.login.Country;
-import com.ramdisk.login.CountryAdapter;
 import com.ramdisk.login.R;
 import com.ramdisk.login.RetrofitUtil;
 

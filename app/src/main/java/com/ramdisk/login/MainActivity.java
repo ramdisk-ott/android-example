@@ -1,15 +1,15 @@
 package com.ramdisk.login;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
+import com.ramdisk.login.city.CityActivity;
+import com.ramdisk.login.country.CountryActivity;
+import com.ramdisk.login.store.StoreActivity;
 import com.ramdisk.login.uom.UOMActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                Intent intent = new Intent(MainActivity.this, CountryActivity.class);
                 startActivity(intent);
             }
         });
